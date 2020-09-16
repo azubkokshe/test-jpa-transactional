@@ -41,27 +41,14 @@ public class TestJpaTransactionalApplication implements CommandLineRunner {
     @Qualifier("workerLock")
     Worker w1;
 
-    @Autowired
-    @Qualifier("workerNotLock")
-    Worker w2;
+//    @Autowired
+//    @Qualifier("workerNotLock")
+//    Worker w2;
 
     @Override
     public void run(String... args) throws Exception {
-//        userRepo.save(User.builder().age(10).name("Alex").sex(Sex.MALE).build());
-//        userRepo.save(User.builder().age(20).name("Michael").sex(Sex.MALE).build());
-//
-//        User user = userRepo.findUserByName("Alex");
-//
-//        if (user != null) {
-//            user.setAge(11);
-//
-//            Thread.sleep(10000);
-//
-//            userRepo.save(user);
-//        }
-//
         w1.start();
-        w2.start();
+//        w2.start();
 
     }
 }
